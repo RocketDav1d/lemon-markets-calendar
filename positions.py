@@ -1,5 +1,4 @@
 import requests
-import json
 
 URL = "https://paper-trading.lemon.markets/v1/positions/"
 API_KEY = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJsZW1vbi5tYXJrZXRzIiwiaXNzIjoibGVtb24ubWFya2V0cyIsInN1YiI6InVzcl9xeUdQUkNDOTlZTEh3blFUbnlscURjblB5ZHpzTnNac0w5IiwiZXhwIjoxNjU1MDQ4ODgxLCJpYXQiOjE2NDk4NjQ4ODEsImp0aSI6ImFwa19xeUdSVDc3RERNTGZiUVhXVnRTS2N0a3IzWkZUNnpod1REIiwibW9kZSI6InBhcGVyIn0.yEHvIFrd_DjcC_vfKLZrJtfssHCUT0EGOk6cm70WRrw"
@@ -21,8 +20,6 @@ class Aktie():
         self.estimated_price = estimated_price
         self.estimated_price_total = estimated_price_total
 
-    # def estimated_price_total():
-    #     return quantity*estimated_price
 
 aktien = []
 count = 0
@@ -38,8 +35,6 @@ for result in results:
     estimated_price = result["estimated_price"]
     estimated_price_total = result["estimated_price_total"]
 
-    # total_investment = buy_price_avg * quantity
-    # total_investment_capital += total_investment
 
     total_investment += estimated_price_total
 
